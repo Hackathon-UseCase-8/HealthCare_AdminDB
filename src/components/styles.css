@@ -1,0 +1,215 @@
+/* Login Styles */
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.login-container button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Staff Dashboard Styles */
+.staff-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.staff-container nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.staff-container nav a {
+  text-decoration: none;
+  color: #007bff;
+  padding: 8px 16px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+}
+
+.staff-container nav a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Scheduler Styles */
+.scheduler-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.scheduler-container nav {
+  margin-bottom: 20px;
+}
+
+.scheduler-container nav a {
+  text-decoration: none;
+  color: #007bff;
+  padding: 8px 16px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+}
+
+.scheduler-container nav a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.schedule-grid {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 400px;
+}
+
+/* Sidebar Styles */
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background: #fff;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1040;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.sidenav-open {
+  transform: translateX(0);
+}
+.sidenav-header {
+  border-bottom: 1px solid #eee;
+}
+.sidenav .nav {
+  margin-top: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.sidenav .nav-link {
+  color: #007bff;
+  padding: 10px 0;
+  width: 100%;
+  text-align: left;
+}
+.sidenav .nav-link.active, .sidenav .nav-link:hover {
+  background: #f0f4ff;
+  color: #0056b3;
+}
+.sidenav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 1030;
+}
+.sidenav-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Main content shift when sidebar open (optional) */
+@media (max-width: 991px) {
+  .sidenav {
+    width: 220px;
+  }
+}
+
+/* Fallback for broken images */
+img[alt="logo"], img[alt="profile"] {
+  background: #eee;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Modal Styles for Add Staff */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  padding: 1rem;
+  min-width: 220px;
+  max-width: 340px;
+}
+.modal-header {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.modal-input {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-content .form-label {
+  text-align: left;
+  display: block;
+}
+
+.staff-search-input {
+  max-width: 200px;
+  margin-right: 8px;
+}
+.add-staff-btn {
+  padding: 7px;
+  padding-right: 16px !important;
+}
+
+.role-card.role-card-selected {
+  border: 2.5px solid #1976d2;
+  box-shadow: 0 0 0 2px #e3f0fc;
+} 
